@@ -1,0 +1,102 @@
+.Rectangle {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  .Mask {
+    width: 710px;
+    // min-height: 365px;
+    min-height: 165px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px 6px rgba(167, 196, 220, 0.5);
+    margin: auto;
+    margin-bottom: 100px;
+    position: relative;
+    top: 100px;
+    padding-bottom: 100px;
+    &.Mask__incorrect {
+      background-image: linear-gradient(to bottom, rgba(250, 145, 97, 0.7), rgba(247, 59, 28, 0.69));
+    }
+    &.Mask__correct {
+      background-image: linear-gradient(to bottom, #47e4c1, #07cddd);
+    }
+    .message {
+      position: relative;
+      top: 80px;
+      width: 300px;
+      height: 18px;
+      font-family: Muli;
+      font-size: 14px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.4px;
+      text-align: center;
+      margin: auto;
+      margin-bottom: 50px;
+      color: #ffffff;
+    }
+    .Rectangle-5 {
+      width: 307px;
+      height: 45px;
+      border-radius: 100px;
+      border: solid 1px #fbfbfb;
+      margin: auto;
+      position: relative;
+      top: 65px;
+      margin-bottom: 19px;
+      .Rectangle-3 {
+        width: 163px;
+        height: 45px;
+        border-radius: 100px;
+        background-color: rgba(249, 249, 249, 0.5);
+        position: absolute;
+        &.Rectangle-3__correct {
+          box-shadow: 0 0 6px 1px rgba(0, 115, 101, 0.5);
+        }
+        &.Rectangle-3__incorrect {
+          box-shadow: 0 0 6px 1px rgba(195, 51, 51, 0.5);
+        }
+        &.right {
+          right: 0px;
+        }
+        &.off {
+          background-color: transparent;
+          box-shadow: none;
+          .Label{
+              span:hover {
+              color:#DCDCDC;
+            }
+          }
+        }
+        .Label {
+          width: 79px;
+          height: 18px;
+          font-family: Muli;
+          font-size: 14px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: 0.4px;
+          text-align: center;
+          margin: auto;
+          position: relative;
+          top: 12px;
+          color: #ffffff;
+        }
+        &.on {
+          .Label {
+            &.Label__correct {
+              color: #00b093;
+            }
+            &.Label__incorrect {
+              color: #e66549;
+            }
+          }
+        }
+      }
+    }
+  }
+}
