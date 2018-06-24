@@ -1,16 +1,29 @@
-import React, {Component} from 'react';
-class Rectangle5 extends Component {
-    constructor(props) {
-        super(props)
-        this.state = { temp: 'cold' };
-    }
-    render() {
-        return (
-            <div className='Rectangle-5'>
-                {this.props.children}
-            </div>
-        );
-    }   
+import React from 'react';
+import Rectangle3 from './Rectangle3'
+const Rectangle5 = props => {
+    const { type, question, isCorrect, onClick } = props;
+    return (
+        <div className='Rectangle-5'>
+            <Rectangle3
+                label={question.left.label}
+                position='left'
+                isCorrect={isCorrect}
+                selected={question.left.selected}
+                question={question}
+                onClick={onClick}
+                type={type}
+            />
+            <Rectangle3
+                label={question.right.label}
+                position='right'
+                isCorrect={isCorrect}
+                selected={question.right.selected}
+                question={question}
+                onClick={onClick}
+                type={type}
+            />
+        </div>
+    ); 
 }
 
 export default Rectangle5;
